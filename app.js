@@ -1,9 +1,5 @@
-const result = require('dotenv').config();
-if (result.error) {
-  console.log('Error loading .env file:', result.error);
-} else {
-  console.log('Environment variables loaded:', result.parsed);
-}
+require('dotenv').config();
+
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -922,6 +918,8 @@ app.post('/save-medical-data', async (req, res) => {
     }
 });
 
-app.listen(3000, function () {
-    console.log("Server started on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, function () {
+    console.log(`Server started on port ${PORT}`);
 });
