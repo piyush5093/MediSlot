@@ -1,0 +1,123 @@
+<%- include('styleNicon'); -%>
+<div class="container-fluid">
+  <div class="row">
+      <div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-body-tertiary" style="background-color: #292F36 !important;">
+          <div class="offcanvas-md offcanvas-end bg-body-tertiary" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+              <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="sidebarMenuLabel">Company name</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto" style="background-color: #292F36 !important;">
+                  <ul class="nav flex-column" style="color:#ffffff !important;">
+                      <li class="nav-item" style="color:#ffffff !important;">
+                          <a class="nav-link   active" aria-current="page" href="#home" data-bs-toggle="tab" role="tab">
+                            <i class="fa-solid fa-heart fa-sm"></i>  
+                            Dashboard
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  " href="#appointments" data-bs-toggle="tab" role="tab">
+                            <i class="fa-solid fa-calendar-check"></i>  
+                            Appointments
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  " href="#medicalHistory" data-bs-toggle="tab" role="tab">
+                            <i class="fa-solid fa-file-waveform fa-sm"></i>  
+                            Medical History
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  " href="#medications" data-bs-toggle="tab" role="tab">
+                            <i class="fa-solid fa-pills fa-sm"></i>
+                                Medications
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  " href="#lab-reports" data-bs-toggle="tab" role="tab">
+                            <i class="fa-solid fa-flask-vial fa-sm"></i>
+                            Lab Reports
+                          </a>
+                      </li>
+                  </ul>
+
+                  <hr class="my-3">
+
+                  <ul class="nav flex-column mb-auto">
+                      <li class="nav-item">
+                          <a class="nav-link  " href="#settings" data-bs-toggle="tab" role="tab">
+                              <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
+                              Settings
+                          </a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link  " href="#sign-out" data-bs-toggle="tab" role="tab">
+                              <svg class="bi"><use xlink:href="#door-closed"/></svg>
+                              Sign out
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+
+    
+    <div class="tab-content col-md-9 col-lg-10 p-0 bg-body">
+      <div class="tab-pane active" id="home" role="tabpanel">
+          <!-- Content for the Home tab -->
+          <%- include('dashboard'); -%>
+      </div>
+      <div  class="tab-pane p-5" id="appointments" role="tabpanel">
+            <%- include('appointments'); -%>
+      </div>
+      <div class="tab-pane" id="medicalHistory" role="tabpanel">
+          <!-- Content for the Messages tab -->
+          <%- include('medicalHistory'); -%>
+      </div>
+      <div class="tab-pane" id="medications" role="tabpanel">
+          <!-- Content for the Medications tab -->
+          <%- include('medications'); -%>
+      </div>
+      <div class="tab-pane" id="lab-reports" role="tabpanel">
+        <%- include('labReports'); -%>
+      </div>
+      <div class="tab-pane" id="settings" role="tabpanel">
+          <!-- Content for the Settings tab -->
+      </div>
+      <div class="tab-pane" id="sign-out" role="tabpanel">
+          <!-- Content for the Sign Out tab -->
+      </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+<script src="script/dashboard.js"></script>
+<script>
+     $(document).ready(function() {
+             $(".view-button").on("click", function (event) {
+            event.preventDefault();
+            var appointmentId = $(this).data("appointment-id");
+            // Redirect to the appointment details page with the appointmentId
+            window.location.href = "/doctors/appointments/" + appointmentId;
+        });
+    });
+    const dateInput = document.getElementById('date');
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0];
+    dateInput.setAttribute('min', formattedDate);
+dateInput.addEventListener("input", function () {
+    if (dateInput.validity.valid) {
+        const selectedDate = new Date(dateInput.value);
+        dateInput.value = selectedDate.toISOString().split("T")[0];
+    }
+});
+
+</script>
+<!-- Add this script before the closing </body> tag -->
+<script src="https://kit.fontawesome.com/0091da8801.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script></body>
+</html>

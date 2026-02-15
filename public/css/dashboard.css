@@ -1,0 +1,373 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a background color for the whole page */
+body {
+  background-color: #f5ebeb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #FFFFFF;
+  color: #292F36;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  font-size: 1.5rem;
+  color: #4ECDC4;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #292F36;
+  color: #ffffff;
+  min-height: calc(100vh - 60px);
+  padding: 0;
+}
+
+.nav-item {
+  color: #ffffff !important;
+}
+
+.sidebar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  padding: 1rem;
+  border-left: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #3a4048;
+  border-left-color: #4ECDC4;
+}
+
+.sidebar .nav-link.active {
+  color: #4ECDC4;
+  background-color: #3a4048;
+  border-left-color: #4ECDC4;
+}
+
+/* Main Content Area */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Container Fluid */
+.container-fluid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Name Section Card */
+.nameSection {
+  background: linear-gradient(135deg, #4ECDC4, #44B8AA);
+  color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-column: span 1;
+}
+
+.nameSection h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.nameSection p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Vital Cards */
+.vitals, .extra-div1, .extra-div2 {
+  background: linear-gradient(135deg, #292F36, #3a4048);
+  color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  transition: all 0.3s ease;
+}
+
+.vitals:hover, .extra-div1:hover, .extra-div2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.vitals h3, .extra-div1 h3, .extra-div2 h3 {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.vitals .value, .extra-div1 .value, .extra-div2 .value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4ECDC4;
+}
+
+/* Button Styles */
+.btn {
+  background-color: #4ECDC4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #4ECDC4;
+  border: 2px solid #4ECDC4;
+}
+
+.btn:hover {
+  background-color: #44B8AA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline:hover {
+  background-color: #4ECDC4;
+  color: #fff;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .container-fluid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+
+  .nameSection {
+    grid-column: span 2;
+    min-height: 220px;
+  }
+
+  .main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet Devices (769px to 1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .container-fluid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .nameSection {
+    grid-column: span 2;
+    min-height: 180px;
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .sidebar .nav-link {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .vitals h3, .extra-div1 h3, .extra-div2 h3 {
+    font-size: 0.9rem;
+  }
+
+  .vitals .value, .extra-div1 .value, .extra-div2 .value {
+    font-size: 1.6rem;
+  }
+}
+
+/* Small Tablets (481px to 768px) */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-brand {
+    font-size: 1.1rem;
+    padding: 0.8rem;
+  }
+
+  .sidebar {
+    min-height: auto;
+  }
+
+  .sidebar .nav-link {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .container-fluid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .nameSection {
+    grid-column: span 2;
+    min-height: 160px;
+    padding: 20px;
+  }
+
+  .nameSection h2 {
+    font-size: 1.3rem;
+  }
+
+  .nameSection p {
+    font-size: 0.9rem;
+  }
+
+  .vitals, .extra-div1, .extra-div2 {
+    min-height: 130px;
+    padding: 15px;
+  }
+
+  .vitals h3, .extra-div1 h3, .extra-div2 h3 {
+    font-size: 0.85rem;
+  }
+
+  .vitals .value, .extra-div1 .value, .extra-div2 .value {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Phones (up to 480px) */
+@media (max-width: 480px) {
+  .navbar-brand {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .sidebar .nav-link {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .container-fluid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .nameSection {
+    grid-column: span 1;
+    min-height: 140px;
+    padding: 15px;
+  }
+
+  .nameSection h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  .nameSection p {
+    font-size: 0.85rem;
+  }
+
+  .vitals, .extra-div1, .extra-div2 {
+    min-height: 110px;
+    padding: 12px;
+  }
+
+  .vitals h3, .extra-div1 h3, .extra-div2 h3 {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .vitals .value, .extra-div1 .value, .extra-div2 .value {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    width: 100%;
+  }
+
+  .btn-outline {
+    width: 100%;
+  }
+}
+
+/* Extra Small Phones (under 360px) */
+@media (max-width: 360px) {
+  .navbar-brand {
+    font-size: 0.9rem;
+  }
+
+  .nameSection h2 {
+    font-size: 1rem;
+  }
+
+  .vitals h3, .extra-div1 h3, .extra-div2 h3 {
+    font-size: 0.75rem;
+  }
+
+  .vitals .value, .extra-div1 .value, .extra-div2 .value {
+    font-size: 1.1rem;
+  }
+}

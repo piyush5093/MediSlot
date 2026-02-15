@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+ <!--Fonts  -->
+ <title>Virtual Health Record</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat&family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">    
+<title>Virtual Health Record landing Page</title>
+
+</head>
+<body>
+<nav>
+    <img src="./images/logo.png" style="margin: 10px;" width="8%" alt="">
+    <h3>VHR</h3>
+    <ul>
+        <li ><a style="color: #171810 !important;" href="#">Home</a></li>
+        <li><a href="docSignUp.html">Doctor</a></li>
+        <li><a href="signUp.html">Patient</a></li>
+        <li><a href="#about-us">About Us</a></li>
+    </ul>
+    </nav>
+    <div class="hero-section">
+        <div class="hero-text">
+<h1 style=" font-family: 'Roboto Slab', serif;">Empowering You to Take <br>
+            Control of Your Health and <br>
+            Well-being!</h1>
+            <p style=" color: #171810 ; font-size: 20px; font-weight: 100; font-family: 'Roboto Slab', serif; ">Effortless Health Record Management for Better Care</p>
+            <button class="big-button" onclick="redirectToPatientPage()">Patient</button>
+        <button style="background-color: #FF6B6B;"onclick="redirectTDocPage()"  class="big-button">Doctor</button>
+    </div>
+    <img class="hero-doctor-img" src="./images/pngegg.png" alt="Doctor">
+    </div>
+
+
+    <div class="what-we-are">
+      <div class="what-we-do-section">
+          <div class="what-we-do-text">
+              <h1>What We Do?</h1>
+              <p>At Virtual Health Record, we are the guardians of a sacred mission: to deliver a holistic and enchanted experience in health record management for both the healers and the healed. Our platform is a boundless tapestry of services and features, woven with timeless threads of wisdom to streamline the management and access of health records. Our mystical offerings include:</p>
+          </div>
+          <img src="./images/Medicine-bro (1).png" alt="Medicine Image">
+      </div>
+      <div class="what-we-do-section">
+     <img src="./images/World Hepatitis Day-bro (1).png" alt="World Hepatitis Day Image">
+
+      <p class="what-we-do-description">Our platform is built to provide a seamless and secure way to manage health records. For healthcare professionals, we offer a range of features such as electronic medical records (EMR) and electronic health records (EHR) management, appointment scheduling, and billing management. Our platform integrates with existing systems to provide a comprehensive view of a patient's health history.</p>
+  </div>
+</div>
+    
+<div class="whyUs">
+  <div class="feat bg-gray pt-5 pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="section-head col-sm-12">
+        <h4><span>Why Choose</span> Us?</h4>
+        <p>When you choose us, you'll feel the easy experience of Web Development. Because we had built it with the assurance of easiet ways of handeling the application.</p>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_one"><i class="fa fa-globe"></i></span>
+          <h6>Specialist Access</h6>
+          <p> Virtual health centers can connect patients with specialists who might not be available locally. This access to a broader range of expertise ensures patients receive comprehensive care.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_two"><i class="fa fa-anchor"></i></span>
+          <h6>Improved Communication</h6>
+          <p>Patients can easily ask questions, share concerns, and get prompt responses, leading to better-informed decision-making about their health.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_three"><i class="fa fa-hourglass-half"></i></span>
+          <h6>Convenience</h6>
+          <p>Virtual health centers offer 24/7 access to healthcare professionals. Patients can schedule appointments at their convenience, reducing wait times and enabling them to fit healthcare into their busy schedules more easily.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_four"><i class="fa fa-database"></i></span>
+          <h6>Continuity of Care</h6>
+          <p>Patients can receive ongoing care and follow-ups without needing to visit a physical location each time. This ensures continuity in treatment plans and makes it easier for healthcare providers to monitor progress.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_five"><i class="fa fa-upload"></i></span>
+          <h6>Environmental Impact</h6>
+          <p>By reducing the need for travel, virtual health centers contribute to a decrease in carbon emissions, thus positively impacting the environment.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="item"> <span class="icon feature_box_col_six"><i class="fa fa-camera"></i></span>
+          <h6>Accessibility</h6>
+          <p> They break down geographical barriers, allowing individuals to access healthcare remotely, particularly beneficial for those in rural or underserved areas. Patients can connect with healthcare providers from anywhere, reducing travel time and costs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><div class="features">
+    <h1 style="text-align: center;">KEY FEATURES</h1>
+    <div class="card-container">
+        <div class="card">
+            <div class="header">Convenience</div>
+            <div class="line"></div>
+            <div class="description"> Patients can schedule appointments, receive medical advice, and access their health records online, saving time and reducing the need for in-person visits to healthcare facilities. This is especially important for patients with busy schedules or mobility issues.</div>
+        </div>
+
+        <div class="card">
+            <div class ="header">Health Records Management</div>
+            <div class="line"></div>
+            <div class="description">All of a patient's medical information, including diagnoses, medications, lab results, and treatment history, can be stored in one centralized location, making it easier for healthcare providers to review and manage the patient's healthcare.</div>
+        </div>
+
+        <div class="card">
+            <div class="header">Reducing Disease Spread</div>
+            <div class="line"></div>
+            <div class="description"> During health crises like pandemics, online doctor-patient platforms can help reduce the spread of contagious diseases by minimizing in-person interactions.</div>
+        </div>
+    </div>
+</div></div>
+<div class="about-us" id="about-us">
+    <div class="about-content">
+        <h1>WE ARE AN HEALTH RECORD <br>COMPANY </h1>
+        <p>The reliability of a virtual health center, like any other healthcare service or facility, is an important consideration. Reliability in the context of a virtual health center refers to the trustworthiness, consistency, and dependability of the services and resources it offers to patients and healthcare providers in an online or digital environment.Patients can store and manage their health records digitally, making it easier to share this information with healthcare providers as needed.</p>
+        <h6>FOR MORE INFORMATION</h6>
+        <button class="big-button" >CONTACT US</button>
+    </div>
+    <img src="./images/8605351.jpg"  alt="">
+
+</div>
+<footer>
+    <img class="footer-logo"src="./images/logo.png" style="margin: 10px;" width="12%" alt="">
+    <div class="impact-sentence">Let's Virtulize Health</div>
+    <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="signUp.html">Pateint</a>
+        <a href="docSignUp.html">Doctor</a>
+        <a href="#">Contact Us</a>
+    </div>
+</footer>
+<script src="https://kit.fontawesome.com/0091da8801.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="./script/serverSide.js"></script>
+</body>
+</html>
